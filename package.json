@@ -1,8 +1,8 @@
 {
     "name": "ngx-size-me",
     "private": true,
-    "version": "0.1.0",
-    "description": "Pinterest like layout components for Angular",
+    "version": "0.1.1",
+    "description": "Makes your angular components aware of width, height and position change",
     "main": "./bundles/ngx-size-me.umd.js",
     "module": "./fesm5/ngx-size-me.js",
     "es2015": "./fesm2015/ngx-size-me.js",
