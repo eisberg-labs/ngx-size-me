@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "tslint-angular"
+    ],
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            [
+                "size",
+                "size"
+            ],
+            "camelCase"
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/documentation
+/coverage
+/.idea
+
+*.log
+*.tgz
