@@ -5,5 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.1.3] - 2018-05-28
+### Fixed
+- Fix missing element-resize-detector dependency.
 ### Added
-- Create library
+- Update link to StackBlitz demo.
+
+## [0.1.1-0.1.2] - 2018-05-28
+- Published by accident.
+
+## [0.1.0] - 2018-05-24
+### Added
+- Create library.
