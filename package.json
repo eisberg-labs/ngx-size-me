@@ -22,7 +22,11 @@
         "compodoc:serve": "compodoc -s",
         "demo": "npm run start --config demo"
     },
-    "author": "",
+    "author": {
+        "name": "Eisberg Labs",
+        "email": "ana@eisberg-labs.com",
+        "url": "https://www.eisberg-labs.com"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/eisberg-labs/ngx-size-me.git"

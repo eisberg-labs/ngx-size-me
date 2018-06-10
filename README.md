@@ -1,5 +1,5 @@
 # [ngx-size-me](https://github.com/eisberg-labs/ngx-size-me)
-[![Build Status](https://travis-ci.org/eisberg-labs/ngx-size-me.svg?branch=master)](https://travis-ci.org/eisberg-labs/ngx-size-me)
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
 
 
@@ -55,5 +55,13 @@ or by binding updates to a property:
 [Try the Demo in StackBlitz](https://stackblitz.com/edit/ngx-size-me-demo)
 
 ## License
-MIT
 
+MIT © [Eisberg Labs](http://eisberg-labs.com)
+
+
+[npm-image]: https://badge.fury.io/js/ngx-size-me.svg
+[npm-url]: https://npmjs.org/package/ngx-size-me
+[travis-image]: https://travis-ci.org/eisberg-labs/ngx-size-me.svg?branch=master
+[travis-url]: https://travis-ci.org/eisberg-labs/ngx-size-me
+[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me
