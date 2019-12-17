@@ -60,19 +60,6 @@ module.exports = function (config) {
                         use: 'raw-loader'
                     },
                     {
-                        test: /\.css$/,
-                        use: [
-                            { loader: 'to-string-loader' },
-                            { loader: 'css-loader' }]
-                    },
-                    {
-                        test: /\.scss$/,
-                        use: [
-                            { loader: 'raw-loader' },
-                            { loader: 'sass-loader' }
-                        ]
-                    },
-                    {
                         enforce: 'post',
                         test: /\.ts/,
                         use: [

@@ -1,0 +1,9 @@
+/tests
+/spec.bundle.js
+/demo
+/karma.conf.js
+.travis.yml
+/.idea
+/coverage
+*.log
+*.tgz

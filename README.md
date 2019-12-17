@@ -20,7 +20,7 @@ First import to your module:
      ],
      imports: [
        BrowserModule,
-       SizeMeModule.forRoot()
+       SizeMeModule
      ],
      providers: [],
      bootstrap: [AppComponent]
@@ -56,7 +56,7 @@ or by binding updates to a property:
 
 ## License
 
-MIT © [Eisberg Labs](http://eisberg-labs.com)
+MIT © [Eisberg Labs](https://www.eisberg-labs.com)
 
 
 [npm-image]: https://badge.fury.io/js/ngx-size-me.svg

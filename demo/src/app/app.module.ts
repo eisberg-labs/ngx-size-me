@@ -12,7 +12,7 @@ import {SizeAwareComponent} from './size-aware.component';
   ],
   imports: [
     BrowserModule,
-    SizeMeModule.forRoot()
+    SizeMeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

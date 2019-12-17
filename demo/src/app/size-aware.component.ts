@@ -10,5 +10,5 @@ export class SizeAwareComponent {
   size: any = {};
   @Input() height;
   @Input() color;
-  @ViewChild(SizeMeDirective) dir: SizeMeDirective;
+  @ViewChild(SizeMeDirective, {static: false}) dir: SizeMeDirective;
 }
