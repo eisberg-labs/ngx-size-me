@@ -7,9 +7,9 @@ export type ResizeStrategyType = 'scroll' | 'object';
  * Handles element resize detector instances.
  * More info on [element-resize-detector]{@link https://github.com/wnr/element-resize-detector}.
  */
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class ResizeDetectorService {
-  private _instances: { [key: string]: elementResizeDetectorMaker.Erd} = {};
+  private _instances: { [key: string]: elementResizeDetectorMaker.Erd } = {};
 
   /**
    * Returns instance of element resize detector.
@@ -25,6 +25,6 @@ export class ResizeDetectorService {
   }
 
   _cacheErd(strategy: ResizeStrategyType) {
-      this._instances[strategy] = elementResizeDetectorMaker({ strategy: strategy});
+    this._instances[strategy] = elementResizeDetectorMaker({strategy: strategy});
   }
 }

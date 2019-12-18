@@ -3,8 +3,9 @@
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
 
 
-Lightweight angular directive that makes your components aware of width, height and position.
+Lightweight angular directive that makes your components aware of width, height and position.  
 
+![Example](documentation/thumbnail.png)
 # Install
 
 ```javascript
@@ -20,7 +21,7 @@ First import to your module:
      ],
      imports: [
        BrowserModule,
-       SizeMeModule.forRoot()
+       SizeMeModule
      ],
      providers: [],
      bootstrap: [AppComponent]
@@ -33,11 +34,14 @@ And use in your component html
 <div sizeMe (resize)="logResize($event)"></div>
 
 ```
-Some of the available input options are:
-- **monitorWidth** - boolean - if true, any changes to your component's width will trigger a recalculation
-- **monitorHeight** - boolean - if true, any changes to your component's height will trigger a recalculation
-- **refreshRate** - number - Frequency of detecting element changes (milliseconds). Default is 16ms.
-- **refreshMode** - 'throttle' | 'debounce' - Mode in which refreshing should occur.
+## Options
+Option | Data type | Description
+-------|-----------|------------
+**monitorWidth** | number | if true, any changes to your component's width will trigger a recalculation
+**monitorHeight** | boolean | if true, any changes to your component's height will trigger a recalculation
+**refreshRate** | number | Frequency of detecting element changes (milliseconds). Default is 16ms.
+**refreshMode** | 'throttle' or 'debounce' | Mode in which refreshing should occur.
+
 When recalculation is triggered, directive's state is updated with new width, height and position (left, right, top, bottom).
 When a state is updated, component can be notified either by binding an event trigger like:
 ```typescript
@@ -47,7 +51,6 @@ When a state is updated, component can be notified either by binding an event tr
 or by binding updates to a property:
 ```typescript
 <div sizeMe [state]="size"></div>
-
 ```
 
 # Demo
@@ -56,7 +59,7 @@ or by binding updates to a property:
 
 ## License
 
-MIT © [Eisberg Labs](http://eisberg-labs.com)
+MIT © [Eisberg Labs](https://www.eisberg-labs.com)
 
 
 [npm-image]: https://badge.fury.io/js/ngx-size-me.svg

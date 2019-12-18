@@ -43,7 +43,7 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
   }
 
   strategisedGetState = () =>
-      this.strategy === 'callback' ? this.callbackState : this.state
+    this.strategy === 'callback' ? this.callbackState : this.state
 
   hasSizeChanged = (current: any, next: any) => {
     const c = current;
@@ -51,19 +51,19 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
     const cp = c.position || {};
     const np = n.position || {};
     return (
-        (this.monitorHeight && c.height !== n.height) ||
-        (this.monitorPosition &&
-            (cp.top !== np.top ||
-                cp.left !== np.left ||
-                cp.bottom !== np.bottom ||
-                cp.right !== np.right)) ||
-        (this.monitorWidth && c.width !== n.width)
+      (this.monitorHeight && c.height !== n.height) ||
+      (this.monitorPosition &&
+        (cp.top !== np.top ||
+          cp.left !== np.left ||
+          cp.bottom !== np.bottom ||
+          cp.right !== np.right)) ||
+      (this.monitorWidth && c.width !== n.width)
     );
   }
 
   checkIfSizeChanged = (el: HTMLElement) => {
     const refreshDelayStrategy = (
-        this.refreshMode === 'throttle'
+      this.refreshMode === 'throttle'
         ? interval(this.refreshRate).pipe(throttle(() => interval(this.refreshRate)))
         : interval(this.refreshRate).pipe(debounce(() => interval(this.refreshRate)))
     );

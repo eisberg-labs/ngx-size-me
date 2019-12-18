@@ -4,7 +4,8 @@ import {Component} from '@angular/core';
 import {ResizeDetectorService} from '../../src/services/resize-detector.service';
 
 @Component({
-  template: `<div style="background: blue" [refreshRate]="100" sizeMe (resize)="logResize($event)"><h2></h2></div>`
+  template: `
+    <div style="background: blue" [refreshRate]="100" sizeMe (resize)="logResize($event)"><h2></h2></div>`
 })
 class TestSizeAwareComponent {
   logResize(event: SizeMeDim) {
@@ -33,7 +34,7 @@ describe('Directive: SizeMeDirective', () => {
       fixture.debugElement.nativeElement.width = '1000px';
       expect(component.logResize).toHaveBeenCalledTimes(1);
       expect(component.logResize).toHaveBeenCalledWith(
-          {width: prevWidth + 1000, height: undefined, position: undefined}
+        {width: prevWidth + 1000, height: undefined, position: undefined}
       );
     });
   });
