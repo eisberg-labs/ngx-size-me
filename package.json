@@ -1,7 +1,7 @@
 {
   "name": "ngx-size-me",
   "private": false,
-  "version": "8.0.0",
+  "version": "8.0.1",
   "description": "Makes your angular components aware of width, height and position change",
   "main": "./bundles/ngx-size-me.umd.js",
   "module": "./fesm5/ngx-size-me.js",
