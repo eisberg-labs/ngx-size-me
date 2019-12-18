@@ -30,6 +30,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "major-version": "npm --prefix projects/ngx-size-me/ version major",
+    "minor-version": "npm --prefix projects/ngx-size-me/ version minor",
+    "patch-version": "npm --prefix projects/ngx-size-me/ version patch",
+    "prepublish": "ng build",
     "publish": "cp README.md dist/ngx-size-me/README.md && cd dist/ngx-size-me && npm publish"
   },
   "private": false,

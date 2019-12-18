@@ -1,7 +1,7 @@
 {
   "name": "ngx-size-me",
   "private": false,
-  "version": "8.0.1",
+  "version": "8.1.0",
   "dependencies": {
     "element-resize-detector": "^1.1.15"
   },
