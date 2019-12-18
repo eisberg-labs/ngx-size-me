@@ -1,4 +1,0 @@
-/**
- * @license ngx-size-me
- * MIT license
- */

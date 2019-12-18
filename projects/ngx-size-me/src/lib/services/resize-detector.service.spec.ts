@@ -1,4 +1,4 @@
-import {ResizeDetectorService} from '../../src/services/resize-detector.service';
+import {ResizeDetectorService} from './resize-detector.service';
 
 describe('ResizeDetectorService', () => {
 

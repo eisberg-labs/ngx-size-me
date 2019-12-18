@@ -1,11 +1,11 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {SizeMeDim, SizeMeDirective} from '../../src/directives/size-me.directive';
 import {Component} from '@angular/core';
-import {ResizeDetectorService} from '../../src/services/resize-detector.service';
+import {SizeMeDim, SizeMeDirective} from './size-me.directive';
+import {ResizeDetectorService} from '../services/resize-detector.service';
 
 @Component({
   template: `
-    <div style="background: blue" [refreshRate]="100" sizeMe (resize)="logResize($event)"><h2></h2></div>`
+    <div style='background: blue' [refreshRate]='100' sizeMe (resize)='logResize($event)'><h2></h2></div>`
 })
 class TestSizeAwareComponent {
   logResize(event: SizeMeDim) {

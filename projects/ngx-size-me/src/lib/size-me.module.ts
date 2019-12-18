@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
-import {SizeMeDirective} from '../directives/size-me.directive';
-import {ResizeDetectorService} from '../services/resize-detector.service';
+import {SizeMeDirective} from './directives/size-me.directive';
+import {ResizeDetectorService} from './services/resize-detector.service';
 
 const COMPONENTS = [SizeMeDirective];
 

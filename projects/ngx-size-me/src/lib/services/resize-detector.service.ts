@@ -25,6 +25,6 @@ export class ResizeDetectorService {
   }
 
   _cacheErd(strategy: ResizeStrategyType) {
-    this._instances[strategy] = elementResizeDetectorMaker({strategy: strategy});
+    this._instances[strategy] = elementResizeDetectorMaker({strategy});
   }
 }
