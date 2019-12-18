@@ -1,90 +1,95 @@
 {
-    "name": "ngx-size-me",
-    "private": false,
-    "version": "8.0.0",
-    "description": "Makes your angular components aware of width, height and position change",
-    "main": "./bundles/ngx-size-me.umd.js",
-    "module": "./fesm5/ngx-size-me.js",
-    "es2015": "./fesm2015/ngx-size-me.js",
-    "esm5": "./esm5/ngx-size-me.js",
-    "esm2015": "./esm2015/ngx-size-me.js",
-    "fesm5": "./fesm5/ngx-size-me.js",
-    "fesm2015": "./fesm2015/ngx-size-me.js",
-    "typings": "./ngx-size-me.d.ts",
-    "scripts": {
-        "build": "node build.js",
-        "test": "karma start",
-        "test:watch": "karma start karma.conf.js --single-run false",
-        "pack:lib": "npm run build && npm pack ./dist",
-        "publish:lib": "npm run build && npm publish ./dist",
-        "publish:lib:next": "npm run build && npm publish --tag next ./dist",
-        "demo": "npm run start --config demo"
-    },
-    "author": {
-        "name": "Eisberg Labs",
-        "email": "ana@eisberg-labs.com",
-        "url": "https://www.eisberg-labs.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/eisberg-labs/ngx-size-me.git"
-    },
-    "bugs": {
-        "url": "https://github.com/eisberg-labs/ngx-size-me/issues"
-    },
-    "homepage": "https://github.com/eisberg-labs/ngx-size-me",
-    "keywords": [
-        "angular",
-        "javascript",
-        "typescript",
-        "responsive",
-        "element resize detector"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "element-resize-detector": "^1.1.15",
-        "tslib": "^1.10.0"
-    },
-    "peerDependencies": {
-        "@angular/core": ">= 8.0.0",
-        "rxjs": ">= 6.0.0"
-    },
-    "devDependencies": {
-        "@angular/compiler": "8.0.0",
-        "@angular/common": "8.0.0",
-        "@angular/core": "8.0.0",
-        "@angular/platform-browser": "8.0.0",
-        "@angular/platform-browser-dynamic": "8.0.0",
-        "@types/jasmine": "3.5.0",
-        "@types/node": "^12.12.19",
-        "angular2-template-loader": "^0.6.2",
-        "chalk": "3.0.0",
-        "codelyzer": "5.2.0",
-        "core-js": "2.6.11",
-        "istanbul-instrumenter-loader": "3.0.1",
-        "jasmine-core": "3.5.0",
-        "karma": "4.4.1",
-        "karma-chrome-launcher": "3.1.0",
-        "karma-coverage-istanbul-reporter": "2.1.1",
-        "karma-jasmine": "2.0.1",
-        "karma-sourcemap-loader": "0.3.7",
-        "karma-spec-reporter": "0.0.32",
-        "karma-webpack": "4.0.2",
-        "reflect-metadata": "0.1.13",
-        "rollup": "1.27.13",
-        "rollup-plugin-license": "0.13.0",
-        "rollup-plugin-node-resolve": "5.2.0",
-        "rollup-plugin-sourcemaps": "0.4.2",
-        "rxjs": "^6.5.3",
-        "shelljs": "0.8.3",
-        "source-map-loader": "0.2.4",
-        "to-string-loader": "1.1.6",
-        "ts-loader": "6.2.1",
-        "tslint": "5.20.1",
-        "tslint-angular": "3.0.2",
-        "typescript": "3.7.3",
-        "webpack": "4.41.3",
-        "zone.js": "0.10.2"
-    },
-    "sideEffects": false
+  "name": "ngx-size-me",
+  "private": false,
+  "version": "8.0.0",
+  "description": "Makes your angular components aware of width, height and position change",
+  "main": "./bundles/ngx-size-me.umd.js",
+  "module": "./fesm5/ngx-size-me.js",
+  "es2015": "./fesm2015/ngx-size-me.js",
+  "esm5": "./esm5/ngx-size-me.js",
+  "esm2015": "./esm2015/ngx-size-me.js",
+  "fesm5": "./fesm5/ngx-size-me.js",
+  "fesm2015": "./fesm2015/ngx-size-me.js",
+  "typings": "./ngx-size-me.d.ts",
+  "scripts": {
+    "build": "node build.js",
+    "test": "karma start",
+    "test:watch": "karma start karma.conf.js --single-run false",
+    "pack:lib": "npm run build && npm pack ./dist",
+    "publish:lib": "npm run build && npm publish ./dist",
+    "publish:lib:next": "npm run build && npm publish --tag next ./dist",
+    "demo": "npm run start --config demo"
+  },
+  "author": {
+    "name": "Eisberg Labs",
+    "email": "ana@eisberg-labs.com",
+    "url": "https://www.eisberg-labs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eisberg-labs/ngx-size-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eisberg-labs/ngx-size-me/issues"
+  },
+  "homepage": "https://github.com/eisberg-labs/ngx-size-me",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "responsive",
+    "element resize detector"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "element-resize-detector": "^1.1.15",
+    "tslib": "^1.10.0",
+    "yarn": "^1.21.1"
+  },
+  "peerDependencies": {
+    "@angular/core": ">= 8.0.0",
+    "rxjs": ">= 6.0.0"
+  },
+  "devDependencies": {
+    "@angular/animations": "^8.2.14",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/platform-server": "^8.2.14",
+    "@types/jasmine": "3.5.0",
+    "@types/node": "^12.12.19",
+    "angular2-template-loader": "^0.6.2",
+    "chalk": "3.0.0",
+    "codelyzer": "5.2.0",
+    "core-js": "2.6.11",
+    "istanbul-instrumenter-loader": "3.0.1",
+    "jasmine-core": "3.5.0",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage-istanbul-reporter": "2.1.1",
+    "karma-jasmine": "2.0.1",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "4.0.2",
+    "reflect-metadata": "0.1.13",
+    "rollup": "1.27.13",
+    "rollup-plugin-license": "0.13.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-sourcemaps": "0.4.2",
+    "rxjs": "^6.5.3",
+    "shelljs": "0.8.3",
+    "source-map-loader": "0.2.4",
+    "to-string-loader": "1.1.6",
+    "ts-loader": "6.2.1",
+    "tsickle": "^0.37.1",
+    "tslint": "5.20.1",
+    "tslint-angular": "3.0.2",
+    "typescript": "~3.4.5",
+    "webpack": "4.41.3",
+    "zone.js": "0.10.2"
+  },
+  "sideEffects": false
 }

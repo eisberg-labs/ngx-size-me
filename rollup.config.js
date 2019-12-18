@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import sourcemaps from 'rollup-plugin-sourcemaps';
+
 /**
  * Add here external dependencies that actually you use.
  *
@@ -31,24 +32,26 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
  *
  */
 const globals = {
-    '@angular/core': 'ng.core',
-    '@angular/common': 'ng.common',
-    'rxjs': 'rxjs',
-    'rxjs/operators': 'rxjs.operators',
-    'rxjs/internal/observable/interval': 'rxjs.internal.observable.interval'
+  '@angular/core': 'ng.core',
+  '@angular/common': 'ng.common',
+  'rxjs': 'rxjs',
+  'rxjs/operators': 'rxjs.operators',
+  'rxjs/internal/observable/interval': 'rxjs.internal.observable.interval'
 
 };
 
 export default {
-    external: ['element-resize-detector', ...Object.keys(globals)],
-    plugins: [resolve(), sourcemaps()],
-    onwarn: () => { return },
-    output: {
-        format: 'umd',
-        name: 'ng.ngxSizeMe',
-        globals: globals,
-        sourcemap: true,
-        exports: 'named',
-        amd: { id: 'ngx-size-me' }
-    }
+  external: ['element-resize-detector', ...Object.keys(globals)],
+  plugins: [resolve(), sourcemaps()],
+  onwarn: () => {
+    return
+  },
+  output: {
+    format: 'umd',
+    name: 'ng.ngxSizeMe',
+    globals: globals,
+    sourcemap: true,
+    exports: 'named',
+    amd: {id: 'ngx-size-me'}
+  }
 }
