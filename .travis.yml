@@ -11,6 +11,7 @@ node_js:
   - "12"
 before_install:
   - npm i npm -g
+  - npm install -g @angular/cli
 install:
   - npm install
 script:
