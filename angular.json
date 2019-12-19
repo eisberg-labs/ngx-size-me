@@ -3,6 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-size-me": {
+      "projectType": "library",
+      "root": "projects/ngx-size-me",
+      "sourceRoot": "projects/ngx-size-me/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-size-me/tsconfig.lib.json",
+            "project": "projects/ngx-size-me/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-size-me/src/test.ts",
+            "tsConfig": "projects/ngx-size-me/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-size-me/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-size-me/tsconfig.lib.json",
+              "projects/ngx-size-me/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "ngx-size-me-demo": {
       "root": "",
       "sourceRoot": "src",
@@ -84,41 +119,7 @@
           }
         }
       }
-    },
-    "ngx-size-me": {
-      "projectType": "library",
-      "root": "projects/ngx-size-me",
-      "sourceRoot": "projects/ngx-size-me/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngx-size-me/tsconfig.lib.json",
-            "project": "projects/ngx-size-me/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-size-me/src/test.ts",
-            "tsConfig": "projects/ngx-size-me/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-size-me/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-size-me/tsconfig.lib.json",
-              "projects/ngx-size-me/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }},
+    }
+  },
   "defaultProject": "ngx-size-me-demo"
 }

@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {SizeMeModule} from 'ngx-size-me';
+import {SizeMeModule} from 'projects/ngx-size-me/src/lib/size-me.module';
 import {SizeAwareComponent} from './size-aware.component';
 
 @NgModule({

@@ -28,13 +28,6 @@
       ]
     }
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
   "files": [
     "projects/ngx-size-me/typings.d.ts"
   ]
