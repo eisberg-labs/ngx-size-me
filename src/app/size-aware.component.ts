@@ -1,5 +1,5 @@
 import {Component, Input, ViewChild} from '@angular/core';
-import {SizeMeDirective} from 'ngx-size-me';
+import {SizeMeDirective} from 'projects/ngx-size-me/src/lib/directives/size-me.directive';
 
 @Component({
   selector: 'app-size-aware',
