@@ -1,0 +1,33 @@
+{
+  "name": "ngx-size-me",
+  "private": false,
+  "version": "8.1.0",
+  "dependencies": {
+    "element-resize-detector": "^1.1.15"
+  },
+  "peerDependencies": {
+    "@angular/core": "^8.0.0",
+    "rxjs": ">= 6.0.0"
+  },
+  "author": {
+    "name": "Eisberg Labs",
+    "email": "ana@eisberg-labs.com",
+    "url": "https://www.eisberg-labs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eisberg-labs/ngx-size-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eisberg-labs/ngx-size-me/issues"
+  },
+  "homepage": "https://github.com/eisberg-labs/ngx-size-me",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "responsive",
+    "element resize detector"
+  ],
+  "license": "MIT"
+}
