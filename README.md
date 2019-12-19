@@ -5,7 +5,7 @@
 
 Lightweight angular directive that makes your components aware of width, height and position.  
 
-![Example](documentation/thumbnail.png)
+![Example](docs/thumbnail.png)
 # Install
 
 ```javascript

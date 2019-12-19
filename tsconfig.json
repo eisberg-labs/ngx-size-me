@@ -1,32 +1,41 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": ".",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "strict": true,
-    "strictPropertyInitialization": false,
-    "allowSyntheticDefaultImports": true,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "rootDir": ".",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "inlineSources": true,
-    "target": "es5",
-    "skipLibCheck": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
       "es2018",
       "dom"
     ],
-    "typeRoots": [
-      "node_modules/@types/"
-    ]
+    "paths": {
+      "ngx-size-me": [
+        "dist/ngx-size-me"
+      ],
+      "ngx-size-me/*": [
+        "dist/ngx-size-me/*"
+      ]
+    }
   },
-  "files": [
-    "public_api.ts",
-    "typings.d.ts"
-  ],
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
   "exclude": [
-    "node_modules",
-    "demo"
+    "node_modules"
+  ],
+  "files": [
+    "projects/ngx-size-me/typings.d.ts"
   ]
 }
