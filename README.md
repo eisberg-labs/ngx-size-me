@@ -64,7 +64,7 @@ MIT © [Eisberg Labs](https://www.eisberg-labs.com)
 
 [npm-image]: https://badge.fury.io/js/ngx-size-me.svg
 [npm-url]: https://npmjs.org/package/ngx-size-me
-[travis-image]: https://travis-ci.com/eisberg-labs/ngx-size-me.svg?branch=master
-[travis-url]: https://travis-ci.com/eisberg-labs/ngx-size-me
-[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me
+[travis-image]: https://travis-ci.com/eisberg-labs/ngx-size-me.svg?branch=develop
+[travis-url]: https://travis-ci.com/eisberg-labs/ngx-size-me?branch=develop
+[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io&path=projects/ngx-size-me
+[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me?path=projects/ngx-size-me
