@@ -1,7 +1,7 @@
 import {AfterContentInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {ResizeDetectorService, ResizeStrategyType} from '../services/resize-detector.service';
+import {interval} from 'rxjs';
 import {debounce, throttle} from 'rxjs/operators';
-import {interval} from 'rxjs/internal/observable/interval';
 
 export type StrategyType = 'callback' | 'render';
 

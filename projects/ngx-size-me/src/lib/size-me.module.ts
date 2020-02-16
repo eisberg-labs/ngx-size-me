@@ -10,6 +10,5 @@ const COMPONENTS = [SizeMeDirective];
   exports: COMPONENTS,
   providers: [ResizeDetectorService]
 })
-
 export class SizeMeModule {
 }
