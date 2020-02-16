@@ -1,14 +1,14 @@
 {
   "name": "ngx-size-me",
   "private": false,
-  "version": "8.1.2",
+  "version": "9.0.0",
   "description": "Makes your angular components aware of width, height and position change",
   "dependencies": {
-    "element-resize-detector": "^1.1.15"
+    "element-resize-detector": "^1.2.1"
   },
   "peerDependencies": {
-    "@angular/core": "^8.0.0",
-    "rxjs": ">= 6.0.0"
+    "@angular/core": "^9.0.0",
+    "rxjs": ">= 6.5.0"
   },
   "author": {
     "name": "Eisberg Labs",
