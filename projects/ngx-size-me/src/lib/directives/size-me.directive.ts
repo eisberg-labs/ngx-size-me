@@ -1,4 +1,4 @@
-import {AfterContentInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {AfterContentInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, Output} from '@angular/core';
 import {ResizeDetectorService, ResizeStrategyType} from '../services/resize-detector.service';
 import {interval} from 'rxjs';
 import {debounce, throttle} from 'rxjs/operators';
@@ -16,12 +16,8 @@ export interface SizeMeDim {
 @Directive({
   selector: '[sizeMe]'
 })
-export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
-  private _state: SizeMeDim = {
-    width: undefined,
-    height: undefined,
-    position: undefined
-  };
+export class SizeMeDirective implements AfterContentInit, OnDestroy {
+  @Input() state: SizeMeDim;
   @Input() monitorWidth = true;
   @Input() monitorHeight = false;
   @Input() monitorPosition = false;
@@ -34,7 +30,8 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
   callbackState: SizeMeDim;
   strategy: StrategyType;
   domEl: any;
-  strategisedSetState = (state: SizeMeDim) => {
+
+  strategisedSetState(state: SizeMeDim) {
     if (this.strategy === 'callback') {
       this.callbackState = state;
       this.resize.emit(state);
@@ -42,10 +39,11 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
     Object.assign(this.state, state);
   }
 
-  strategisedGetState = () =>
-    this.strategy === 'callback' ? this.callbackState : this.state
+  strategisedGetState() {
+    return this.strategy === 'callback' ? this.callbackState : this.state;
+  }
 
-  hasSizeChanged = (current: any, next: any) => {
+  hasSizeChanged(current: any, next: any) {
     const c = current;
     const n = next;
     const cp = c.position || {};
@@ -61,7 +59,7 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
     );
   }
 
-  checkIfSizeChanged = (el: HTMLElement) => {
+  checkIfSizeChanged(el: HTMLElement) {
     const refreshDelayStrategy = (
       this.refreshMode === 'throttle'
         ? interval(this.refreshRate).pipe(throttle(() => interval(this.refreshRate)))
@@ -90,19 +88,10 @@ export class SizeMeDirective implements OnInit, AfterContentInit, OnDestroy {
   }
 
   constructor(public el: ElementRef, private resizeDetector: ResizeDetectorService) {
-
-  }
-
-  get state() {
-    return this._state;
-  }
-
-  @Input('state')
-  set state(state: any) {
-    this._state = state;
-  }
-
-  ngOnInit(): void {
+    this.checkIfSizeChanged = this.checkIfSizeChanged.bind(this);
+    this.hasSizeChanged = this.hasSizeChanged.bind(this);
+    this.strategisedSetState = this.strategisedSetState.bind(this);
+    this.strategisedGetState = this.strategisedGetState.bind(this);
   }
 
   ngAfterContentInit(): void {
