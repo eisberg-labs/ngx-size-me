@@ -108,6 +108,8 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
     if (this.detector) {
       this.detector.uninstall(this.el.nativeElement);
     }
+    this.changeSubject.unsubscribe();
+    this.resize.unsubscribe();
   }
 
   determineStrategy() {

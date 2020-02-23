@@ -30,10 +30,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "get-version": "node -p \"require('./projects/ngx-size-me/package').version\"",
     "major-version": "npm --prefix projects/ngx-size-me/ version major",
     "minor-version": "npm --prefix projects/ngx-size-me/ version minor",
     "patch-version": "npm --prefix projects/ngx-size-me/ version patch",
-    "publish": "ng build ngx-size-me --prod && cp README.md dist/ngx-size-me/README.md && cd dist/ngx-size-me && npm publish"
+    "build-prod": "ng build ngx-size-me --prod  && cp README.md dist/ngx-size-me/README.md",
+    "commit-version": "git commit -a -m \"$(npm run get-version --silent)\" && git tag \"v$(npm run get-version --silent)\"",
+    "publish": "npm run build-prod && cd dist/ngx-size-me && npm publish"
   },
   "private": true,
   "dependencies": {
