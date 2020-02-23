@@ -45,4 +45,11 @@ describe('Directive: SizeMeDirective', () => {
     directive.checkIfSizeChanged(null);
     expect(directive.strategizedSetState).toHaveBeenCalledTimes(0);
   });
+
+    it('should warn if state is null', () => {
+      const directive = new SizeMeDirective(null, null);
+      spyOn(directive, 'strategizedSetState');
+      directive.checkIfSizeChanged(null);
+      expect(directive.strategizedSetState).toHaveBeenCalledTimes(0);
+    });
 });

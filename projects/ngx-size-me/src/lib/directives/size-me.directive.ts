@@ -33,7 +33,14 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
   private changeSubject = new Subject<HTMLElement>();
 
   strategizedSetState(state: SizeMeDim) {
-    if (this.strategy === 'callback') {
+    if (!this.state) {
+      this.state = {
+        width: undefined,
+        height: undefined,
+        position: undefined
+      };
+    }
+    if (this.strategy === 'callback' && state) {
       this.callbackState = state;
       this.resize.emit(state);
     }
@@ -80,7 +87,7 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
       position: this.monitorPosition ? {right, left, top, bottom} : undefined,
     };
 
-    if (this.hasSizeChanged(this.strategizedGetState(), next)) {
+    if (next && this.hasSizeChanged(this.strategizedGetState(), next)) {
       this.strategizedSetState(next);
     }
   }
