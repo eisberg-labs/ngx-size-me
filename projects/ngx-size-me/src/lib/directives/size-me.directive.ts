@@ -1,6 +1,6 @@
 import {AfterContentInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, Output} from '@angular/core';
 import {ResizeDetectorService, ResizeStrategyType} from '../services/resize-detector.service';
-import {interval} from 'rxjs';
+import {interval, Subject} from 'rxjs';
 import {debounce, throttle} from 'rxjs/operators';
 
 export type StrategyType = 'callback' | 'render';
@@ -30,8 +30,9 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
   callbackState: SizeMeDim;
   strategy: StrategyType;
   domEl: any;
+  private changeSubject = new Subject<HTMLElement>();
 
-  strategisedSetState(state: SizeMeDim) {
+  strategizedSetState(state: SizeMeDim) {
     if (this.strategy === 'callback') {
       this.callbackState = state;
       this.resize.emit(state);
@@ -39,7 +40,7 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
     Object.assign(this.state, state);
   }
 
-  strategisedGetState() {
+  strategizedGetState() {
     return this.strategy === 'callback' ? this.callbackState : this.state;
   }
 
@@ -60,38 +61,41 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
   }
 
   checkIfSizeChanged(el: HTMLElement) {
-    const refreshDelayStrategy = (
-      this.refreshMode === 'throttle'
-        ? interval(this.refreshRate).pipe(throttle(() => interval(this.refreshRate)))
-        : interval(this.refreshRate).pipe(debounce(() => interval(this.refreshRate)))
-    );
-    refreshDelayStrategy.subscribe(() => {
-      const {
-        width,
-        height,
-        right,
-        left,
-        top,
-        bottom,
-      } = el.getBoundingClientRect();
+    if (el == null) {
+      return;
+    }
 
-      const next: SizeMeDim = {
-        width: this.monitorWidth ? width : undefined,
-        height: this.monitorHeight ? height : undefined,
-        position: this.monitorPosition ? {right, left, top, bottom} : undefined,
-      };
+    const {
+      width,
+      height,
+      right,
+      left,
+      top,
+      bottom,
+    } = el.getBoundingClientRect();
 
-      if (this.hasSizeChanged(this.strategisedGetState(), next)) {
-        this.strategisedSetState(next);
-      }
-    });
+    const next: SizeMeDim = {
+      width: this.monitorWidth ? width : undefined,
+      height: this.monitorHeight ? height : undefined,
+      position: this.monitorPosition ? {right, left, top, bottom} : undefined,
+    };
+
+    if (this.hasSizeChanged(this.strategizedGetState(), next)) {
+      this.strategizedSetState(next);
+    }
   }
 
   constructor(public el: ElementRef, private resizeDetector: ResizeDetectorService) {
     this.checkIfSizeChanged = this.checkIfSizeChanged.bind(this);
     this.hasSizeChanged = this.hasSizeChanged.bind(this);
-    this.strategisedSetState = this.strategisedSetState.bind(this);
-    this.strategisedGetState = this.strategisedGetState.bind(this);
+    this.strategizedSetState = this.strategizedSetState.bind(this);
+    this.strategizedGetState = this.strategizedGetState.bind(this);
+    const refreshDelayStrategy = (
+      this.refreshMode === 'throttle'
+        ? this.changeSubject.pipe(throttle(() => interval(this.refreshRate)))
+        : this.changeSubject.pipe(debounce(() => interval(this.refreshRate)))
+    );
+    refreshDelayStrategy.subscribe((elem) => this.checkIfSizeChanged(elem));
   }
 
   ngAfterContentInit(): void {
@@ -135,6 +139,6 @@ export class SizeMeDirective implements AfterContentInit, OnDestroy {
     }
 
     this.domEl = found;
-    this.detector.listenTo(this.domEl, this.checkIfSizeChanged);
+    this.detector.listenTo(this.domEl, (el) => this.changeSubject.next(el));
   }
 }
