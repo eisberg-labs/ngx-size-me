@@ -4,9 +4,9 @@
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
 
 
-Lightweight angular directive that makes your components aware of width, height and position.  
-
+Lightweight angular directive that makes your components aware of width, height and position.
 ![Example](docs/thumbnail.png)
+If you 👍 this project, consider giving it a ★, thanks! 🙌
 # Install
 
 ```javascript

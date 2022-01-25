@@ -30,7 +30,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "cp README.md projects/ngx-size-me && ng build ngx-size-me && cd dist/ngx-size-me && npm publish"
+    "publish": "cp README.md projects/ngx-size-me && ng build --configuration production ngx-size-me && cd dist/ngx-size-me && npm publish"
   },
   "private": true,
   "dependencies": {
