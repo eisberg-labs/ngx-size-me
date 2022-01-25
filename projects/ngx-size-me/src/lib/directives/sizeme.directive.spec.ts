@@ -38,4 +38,18 @@ describe('Directive: SizeMeDirective', () => {
       );
     });
   });
+
+  it('should not trigger strategizedSetState', () => {
+    const directive = new SizeMeDirective(null, null);
+    spyOn(directive, 'strategizedSetState');
+    directive.checkIfSizeChanged(null);
+    expect(directive.strategizedSetState).toHaveBeenCalledTimes(0);
+  });
+
+    it('should warn if state is null', () => {
+      const directive = new SizeMeDirective(null, null);
+      spyOn(directive, 'strategizedSetState');
+      directive.checkIfSizeChanged(null);
+      expect(directive.strategizedSetState).toHaveBeenCalledTimes(0);
+    });
 });

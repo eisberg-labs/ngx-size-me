@@ -1,5 +1,6 @@
+[![Downloads](http://img.shields.io/npm/dm/ngx-size-me.svg)](https://npmjs.org/package/ngx-size-me)
+![Build status](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)
 # [ngx-size-me](https://github.com/eisberg-labs/ngx-size-me)
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
 
 
@@ -64,7 +65,7 @@ MIT © [Eisberg Labs](https://www.eisberg-labs.com)
 
 [npm-image]: https://badge.fury.io/js/ngx-size-me.svg
 [npm-url]: https://npmjs.org/package/ngx-size-me
-[travis-image]: https://travis-ci.com/eisberg-labs/ngx-size-me.svg?branch=master
-[travis-url]: https://travis-ci.com/eisberg-labs/ngx-size-me
-[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me
+[travis-image]: https://travis-ci.com/eisberg-labs/ngx-size-me.svg?branch=develop
+[travis-url]: https://travis-ci.com/eisberg-labs/ngx-size-me?branch=develop
+[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io&path=projects/ngx-size-me
+[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me?path=projects/ngx-size-me
