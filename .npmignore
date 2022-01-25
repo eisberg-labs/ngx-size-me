@@ -3,6 +3,5 @@
 /karma.conf.js
 .travis.yml
 /.idea
-/coverage
 *.log
 *.tgz

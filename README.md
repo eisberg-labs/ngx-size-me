@@ -1,5 +1,6 @@
+[![Downloads](http://img.shields.io/npm/dm/ngx-size-me.svg)](https://npmjs.org/package/ngx-size-me)
+![Build status](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)
 # [ngx-size-me](https://github.com/eisberg-labs/ngx-size-me)
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
 
 
