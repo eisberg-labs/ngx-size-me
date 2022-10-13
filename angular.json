@@ -28,6 +28,15 @@
             "tsConfig": "projects/ngx-size-me/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-size-me/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-size-me/**/*.ts",
+              "projects/ngx-size-me/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -111,8 +120,10 @@
       }
     }
   },
-  "defaultProject": "ngx-size-me-demo",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
