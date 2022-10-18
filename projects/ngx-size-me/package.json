@@ -5,11 +5,11 @@
   "description": "Makes your angular components aware of width, height and position change",
   "dependencies": {
     "element-resize-detector": "^1.2.1",
-    "tslib": "~6.5.4"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "^14.2.5",
-    "rxjs": ">= 6.5.0"
+    "@angular/core": "^14.2.0",
+    "rxjs": ">=7.5.0"
   },
   "author": {
     "name": "Eisberg Labs",
