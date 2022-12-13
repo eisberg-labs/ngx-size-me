@@ -1,8 +1,10 @@
+# ⚠ Project is moved to [Angular Components](https://github.com/eisberg-labs/angular-components).
+## Use [@eisberg-labs/ngx-size-me](https://www.npmjs.com/package/@eisberg-labs/ngx-size-me) instead.
+
 [![Downloads](http://img.shields.io/npm/dm/ngx-size-me.svg)](https://npmjs.org/package/ngx-size-me)
 ![Build status](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)
 # [ngx-size-me](https://github.com/eisberg-labs/ngx-size-me)
 >Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
-
 
 Lightweight angular directive that makes your components aware of width, height and position.
 ![Example](docs/thumbnail.png)
