@@ -1,4 +1,8 @@
 [![Continuous Integration](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/eisberg-labs/ngx-size-me/branch/master/graph/badge.svg?token=GQCS6ZEVU3)](https://codecov.io/gh/eisberg-labs/ngx-size-me)
+[![npm downloads](https://img.shields.io/npm/dm/@eisberg-labs/ngx-size-me.svg)](https://www.npmjs.com/package/@eisberg-labs/ngx-size-me)
+[![npm latest package](https://img.shields.io/npm/v/@eisberg-labs/ngx-size-me/latest.svg)](https://www.npmjs.com/package/@eisberg-labs/ngx-size-me)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/eisberg-labs/ngx-size-me.svg)](https://isitmaintained.com/project/eisberg-labs/ngx-size-me 'Average time to resolve an issue')
 [![Follow me](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anamarjanica/)
 # Ngx Size Me
 
