@@ -36,7 +36,7 @@ jobs:
         run: sudo apt-get update -yq && sudo apt-get install xvfb -yq && xvfb-run --auto-servernum npm test
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v3.18.0
         with:
           github-token: ${{ secrets.github_token }}
       - name: Create Release
@@ -50,6 +50,6 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
       - name: Publish
         if: steps.changelog.outputs.skipped != 'true'
-        run: npm publish
+        run: npm run build && cd dist/ngx-size-me && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
