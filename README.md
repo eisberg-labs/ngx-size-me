@@ -1,5 +1,5 @@
 [![Continuous Integration](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml)
-
+[![Follow me](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anamarjanica/)
 # Ngx Size Me
 
 > Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me). Lightweight
