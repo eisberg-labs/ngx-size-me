@@ -1,3 +1,5 @@
+[![Continuous Integration](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml)
+
 # Ngx Size Me
 
 > Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me). Lightweight
@@ -82,7 +84,7 @@ Or by binding updates to a property:
 
 ## Code of Conduct
 
-We follow the [Rust Code of Conduct](http://www.rust-lang.org/conduct.html).
+I follow the [Rust Code of Conduct](http://www.rust-lang.org/conduct.html).
 
 ## Contributing
 
@@ -92,9 +94,9 @@ Everyone is welcome to contribute. You can read more about [contributing here](.
 
 If you find this project useful, give it a star. You could also consider supporting us through the following platforms:
 - [Become a GitHub Sponsor](https://github.com/sponsors/amarjanica)
-- [Support us on Patreon](https://www.patreon.com/amarjanica)
+- [Support me on Patreon](https://www.patreon.com/amarjanica)
 
-As our project grows, we will showcase our sponsors' logos and links in this section. Thank you for your support!
+As this project grows, I will showcase sponsors' logos and links in this section. Thank you for your support!
 
 ## Contact
 

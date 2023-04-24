@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 env:
   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
