@@ -15,11 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          registry-url: https://registry.npmjs.org/
-          node-version: ${{ matrix.node-version }}
-          scope: '@eisberg-labs'
+        uses: actions/setup-node@v2
       - name: Cache Node.js modules
         uses: actions/cache@v2
         with:
