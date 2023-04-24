@@ -1,73 +1,107 @@
-# ⚠ Project is moved to [Angular Components](https://github.com/eisberg-labs/angular-components).
-## Use [@eisberg-labs/ngx-size-me](https://www.npmjs.com/package/@eisberg-labs/ngx-size-me) instead.
+# Ngx Size Me
 
-[![Downloads](http://img.shields.io/npm/dm/ngx-size-me.svg)](https://npmjs.org/package/ngx-size-me)
-![Build status](https://github.com/eisberg-labs/ngx-size-me/actions/workflows/ci.yml/badge.svg)
-# [ngx-size-me](https://github.com/eisberg-labs/ngx-size-me)
->Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me).
+> Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me). Lightweight
+> angular directive that makes your components aware of width, height and position.
 
-Lightweight angular directive that makes your components aware of width, height and position.
 ![Example](docs/thumbnail.png)
 If you 👍 this project, consider giving it a ★, thanks! 🙌
-# Install
 
-```javascript
-npm install ngx-size-me --save
+## Table of Contents
 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo](#demo)
+- [API](#api)
+- [Code of Conduct](#code-of-conduct)
+- [Contributing](#contributing)
+- [Sponsors](#sponsors)
+- [Contact](#contact)
+- [License](#license)
+
+
+## Installation
+
+```bash
+npm install @eisberg-labs/ngx-size-me --save
 ```
-# Usage
+
+## Usage
+
 First import to your module:
+
 ```typescript
-   @NgModule({
-     declarations: [
-       AppComponent
-     ],
-     imports: [
-       BrowserModule,
-       SizeMeModule
-     ],
-     providers: [],
-     bootstrap: [AppComponent]
-   })
-   export class AppModule { }
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    SizeMeModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
 
 ```
-And use in your component html
+
+Then, use the directive in your component's HTML:
+
 ```typescript
 <div sizeMe (resize)="logResize($event)"></div>
-
 ```
-## Options
-Option | Data type | Description
--------|-----------|------------
-**monitorWidth** | number | if true, any changes to your component's width will trigger a recalculation
-**monitorHeight** | boolean | if true, any changes to your component's height will trigger a recalculation
-**refreshRate** | number | Frequency of detecting element changes (milliseconds). Default is 16ms.
-**refreshMode** | 'throttle' or 'debounce' | Mode in which refreshing should occur.
 
-When recalculation is triggered, directive's state is updated with new width, height and position (left, right, top, bottom).
+## Demo
+
+[View Demo and Documentation](https://ngx-size-me.amarjanica.com)
+
+## Api
+
+|Option | Data type | Description|
+|-------|-----------|------------|
+|**monitorWidth** | number | if true, any changes to your component's width will trigger a recalculation|
+|**monitorHeight** | boolean | if true, any changes to your component's height will trigger a recalculation|
+|**refreshRate** | number | Frequency of detecting element changes (milliseconds). Default is 16ms.|
+|**refreshMode** | 'throttle' or 'debounce' | Mode in which refreshing should occur.|
+
+When recalculation is triggered, directive's state is updated with new width, height and position (left, right, top,
+bottom).
 When a state is updated, component can be notified either by binding an event trigger like:
+
 ```typescript
-<div sizeMe (resize)="logResize($event)"></div>
+<div sizeMe (resize)="logResize($event)" > </div>
 
 ```
-or by binding updates to a property:
+
+Or by binding updates to a property:
+
 ```typescript
 <div sizeMe [state]="size"></div>
 ```
 
-# Demo
+## Code of Conduct
 
-[Try the Demo in StackBlitz](https://stackblitz.com/edit/ngx-size-me-demo)
+We follow the [Rust Code of Conduct](http://www.rust-lang.org/conduct.html).
+
+## Contributing
+
+Everyone is welcome to contribute. You can read more about [contributing here](./CONTRIBUTING.md).
+
+## Sponsors
+
+If you find this project useful, give it a star. You could also consider supporting us through the following platforms:
+- [Become a GitHub Sponsor](https://github.com/sponsors/amarjanica)
+- [Support us on Patreon](https://www.patreon.com/amarjanica)
+
+As our project grows, we will showcase our sponsors' logos and links in this section. Thank you for your support!
+
+## Contact
+
+Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/anamarjanica/).
 
 ## License
 
-MIT © [Eisberg Labs](https://www.eisberg-labs.com)
+This project is [MIT licensed](./LICENSE).
 
 
-[npm-image]: https://badge.fury.io/js/ngx-size-me.svg
-[npm-url]: https://npmjs.org/package/ngx-size-me
-[travis-image]: https://travis-ci.com/eisberg-labs/ngx-size-me.svg?branch=develop
-[travis-url]: https://travis-ci.com/eisberg-labs/ngx-size-me?branch=develop
-[daviddm-image]: https://david-dm.org/eisberg-labs/ngx-size-me.svg?theme=shields.io&path=projects/ngx-size-me
-[daviddm-url]: https://david-dm.org/eisberg-labs/ngx-size-me?path=projects/ngx-size-me

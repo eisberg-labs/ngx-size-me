@@ -1,0 +1,68 @@
+---
+title: Ngx Size Me
+hide_table_of_contents: false
+---
+
+# Ngx Size Me
+> Responsive component for Angular, inspired by [react-size-me](https://github.com/ctrlplusb/react-size-me). Lightweight angular directive that makes your components aware of width, height and position.
+
+
+## Installation
+```bash
+npm install @eisberg-labs/ngx-size-me --save
+```
+
+## Usage
+
+First import to your module:
+```typescript
+   @NgModule({
+     declarations: [
+       AppComponent
+     ],
+     imports: [
+       BrowserModule,
+       SizeMeModule
+     ],
+     providers: [],
+     bootstrap: [AppComponent]
+   })
+   export class AppModule { }
+
+```
+And use in your component html
+```typescript
+<div sizeMe (resize)="logResize($event)"></div>
+```
+
+## Demo
+<iframe src="https://codesandbox.io/embed/angular-15-ngx-size-me-uy7sew?fontsize=14&hidenavigation=1&theme=dark"
+        style={{'width': '100%', 'height':'500px', 'border':0, 'border-radius': '4px', 'overflow':'hidden'}}
+        title="angular-15-ngx-size-me"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+## Api
+
+|Option | Data type | Description|
+|-------|-----------|------------|
+|**monitorWidth** | number | if true, any changes to your component's width will trigger a recalculation|
+|**monitorHeight** | boolean | if true, any changes to your component's height will trigger a recalculation|
+|**refreshRate** | number | Frequency of detecting element changes (milliseconds). Default is 16ms.|
+|**refreshMode** | 'throttle' or 'debounce' | Mode in which refreshing should occur.|
+
+When recalculation is triggered, directive's state is updated with new width, height and position (left, right, top, bottom).
+When a state is updated, component can be notified either by binding an event trigger like:
+
+```typescript
+<div sizeMe (resize)="logResize($event)"></div>
+
+```
+or by binding updates to a property:
+```typescript
+<div sizeMe [state]="size"></div>
+```
+
+## License
+
+MIT © [Eisberg Labs](https://www.eisberg-labs.com)

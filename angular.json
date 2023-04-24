@@ -1,127 +1,52 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": ".",
   "projects": {
     "ngx-size-me": {
       "projectType": "library",
-      "root": "projects/ngx-size-me",
-      "sourceRoot": "projects/ngx-size-me/src",
+      "root": "ngx-size-me",
+      "sourceRoot": "ngx-size-me/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-size-me/tsconfig.lib.json",
-            "project": "projects/ngx-size-me/ng-package.json"
+            "project": "ngx-size-me/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-size-me/tsconfig.lib.prod.json"
+              "tsConfig": "ngx-size-me/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "ngx-size-me/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-size-me/src/test.ts",
-            "tsConfig": "projects/ngx-size-me/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-size-me/karma.conf.js"
+            "main": "ngx-size-me/src/test.ts",
+            "tsConfig": "ngx-size-me/tsconfig.spec.json",
+            "karmaConfig": "ngx-size-me/karma.conf.js",
+            "codeCoverage": true
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/ngx-size-me/**/*.ts",
-              "projects/ngx-size-me/**/*.html"
+              "ngx-size-me/**/*.ts",
+              "ngx-size-me/**/*.html"
             ]
-          }
-        }
-      }
-    },
-    "ngx-size-me-demo": {
-      "root": "",
-      "sourceRoot": "src",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist-demo",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ]
-            }
-          },
-          "defaultConfiguration": ""
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-size-me-demo:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ngx-size-me-demo:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-size-me-demo:build"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": false,
+    "analytics": "d898e046-07fb-4149-98ac-41eacb1aa38a",
     "schematicCollections": [
       "@angular-eslint/schematics"
     ]

@@ -1,0 +1,39 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.0.3",
+    "@angular/common": "^15.0.3",
+    "@angular/compiler": "^15.0.3",
+    "@angular/core": "^15.0.3",
+    "@angular/platform-browser": "^15.0.3",
+    "@angular/platform-browser-dynamic": "^15.0.3",
+    "@eisberg-labs/ngx-size-me": "../ngx-size-me",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.0.3",
+    "@angular/cli": "^15.0.3",
+    "@angular/compiler-cli": "^15.0.3",
+    "@types/jasmine": "3.6.3",
+    "@types/jasminewd2": "2.0.8",
+    "@types/node": "14.14.28",
+    "codelyzer": "6.0.1",
+    "protractor": "7.0.0",
+    "ts-node": "9.1.1",
+    "tslint": "~6.1.3",
+    "typescript": "~4.8.4"
+  },
+  "keywords": [],
+  "description": ""
+}
