@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --code-coverage",
     "lint": "ng lint",
-    "postbuild": "cp README.md LICENSE thumbnail.png dist/ngx-size-me",
+    "postbuild": "cp README.md LICENSE CHANGELOG.md thumbnail.png dist/ngx-size-me",
     "prettier": "prettier -c ngx-size-me/src/**/*",
     "prettier:fix": "prettier --write ngx-size-me/src/**/*"
   },

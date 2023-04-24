@@ -19,6 +19,7 @@ If you 👍 this project, consider giving it a ★, thanks! 🙌
 - [Usage](#usage)
 - [Demo](#demo)
 - [API](#api)
+- [Changelog](#changelog)
 - [Code of Conduct](#code-of-conduct)
 - [Contributing](#contributing)
 - [Sponsors](#sponsors)
@@ -86,6 +87,11 @@ Or by binding updates to a property:
 ```typescript
 <div sizeMe [state]="size"></div>
 ```
+
+## Changelog
+
+All notable changes to this project will be documented in [this file](./CHANGELOG.md).
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## Code of Conduct
 
