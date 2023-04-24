@@ -1,7 +1,0 @@
-/tests
-/spec.bundle.js
-/karma.conf.js
-.travis.yml
-/.idea
-*.log
-*.tgz

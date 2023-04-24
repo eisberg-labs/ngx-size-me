@@ -1,80 +1,51 @@
 {
-  "name": "ngx-size-me-demo",
+  "name": "@eisberg-labs/ngx-size-me-project",
   "version": "0.0.0",
-  "description": "Makes your angular components aware of width, height and position change",
-  "author": {
-    "name": "Eisberg Labs",
-    "email": "ana@eisberg-labs.com",
-    "url": "https://www.eisberg-labs.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eisberg-labs/ngx-size-me.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eisberg-labs/ngx-size-me/issues"
-  },
-  "homepage": "https://github.com/eisberg-labs/ngx-size-me",
-  "keywords": [
-    "angular",
-    "javascript",
-    "typescript",
-    "responsive",
-    "element resize detector"
-  ],
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production ngx-size-me",
-    "test": "ng test",
+    "build": "ng build",
+    "build-all": "for PROJ in $(cat angular.json | jq -r '.projects | keys[]'); do ng build $PROJ; done",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test --watch false",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "publish": "cp README.md projects/ngx-size-me && ng build --configuration production ngx-size-me && cd dist/ngx-size-me && npm publish"
+    "prettier": "prettier -c ngx-size-me/**/*",
+    "prettier:fix": "prettier --write ngx-size-me/**/*"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.2.0",
-    "@angular/common": "^14.2.0",
-    "@angular/compiler": "^14.2.0",
-    "@angular/core": "^14.2.0",
-    "@angular/forms": "^14.2.0",
-    "@angular/platform-browser": "^14.2.0",
-    "@angular/platform-browser-dynamic": "^14.2.0",
-    "@angular/router": "^14.2.0",
+    "@angular/animations": "^15.0.3",
+    "@angular/common": "^15.0.3",
+    "@angular/compiler": "^15.0.3",
+    "@angular/core": "^15.0.3",
+    "@angular/platform-browser": "^15.0.3",
+    "@angular/platform-browser-dynamic": "^15.0.3",
     "rxjs": "~7.5.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4",
+    "element-resize-detector": "^1.2.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.6",
-    "@angular-eslint/builder": "14.1.2",
-    "@angular-eslint/eslint-plugin": "14.1.2",
-    "@angular-eslint/eslint-plugin-template": "14.1.2",
-    "@angular-eslint/schematics": "14.1.2",
-    "@angular-eslint/template-parser": "14.1.2",
-    "@angular/cli": "^14.2.6",
-    "@angular/compiler-cli": "^14.2.0",
-    "@angular/language-service": "^14.2.0",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "5.37.0",
-    "@typescript-eslint/parser": "5.37.0",
-    "element-resize-detector": "^1.2.4",
-    "eslint": "^8.23.1",
+    "@angular-devkit/build-angular": "^15.0.3",
+    "@angular-eslint/builder": "15.1.0",
+    "@angular-eslint/eslint-plugin": "15.1.0",
+    "@angular-eslint/eslint-plugin-template": "15.1.0",
+    "@angular-eslint/schematics": "15.1.0",
+    "@angular-eslint/template-parser": "15.1.0",
+    "@angular/cli": "~15.0.3",
+    "@angular/compiler-cli": "^15.0.3",
+    "@types/jasmine": "~4.0.0",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
+    "eslint": "^8.28.0",
     "jasmine-core": "~4.3.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.4.1",
+    "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "ng-packagr": "^14.2.0",
-    "typescript": "4.8.4",
-    "webpack": "^5.0.0"
-  },
-  "resolutions": {
-    "webpack": "^5.0.0"
+    "ng-packagr": "15.0.3",
+    "prettier": "^2.8.3",
+    "typescript": "~4.8.4"
   }
 }
