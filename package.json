@@ -9,8 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --code-coverage",
     "lint": "ng lint",
-    "prettier": "prettier -c ngx-size-me/**/*",
-    "prettier:fix": "prettier --write ngx-size-me/**/*"
+    "prettier": "prettier -c ngx-size-me/src/**/*",
+    "prettier:fix": "prettier --write ngx-size-me/src/**/*"
   },
   "private": true,
   "dependencies": {
