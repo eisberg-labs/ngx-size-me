@@ -7,7 +7,7 @@
     "build": "ng build",
     "build-all": "for PROJ in $(cat angular.json | jq -r '.projects | keys[]'); do ng build $PROJ; done",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch false",
+    "test": "ng test --no-watch --code-coverage",
     "lint": "ng lint",
     "prettier": "prettier -c ngx-size-me/**/*",
     "prettier:fix": "prettier --write ngx-size-me/**/*"
