@@ -1,4 +1,4 @@
-## 2.0.3 (2023-04-24)
+## [2.0.4](https://github.com/eisberg-labs/ngx-size-me/compare/2.0.2...2.0.4) (2023-04-24)
 
 
 ### Bug Fixes
