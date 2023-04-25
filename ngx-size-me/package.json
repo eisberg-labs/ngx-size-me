@@ -1,5 +1,6 @@
 {
   "name": "@eisberg-labs/ngx-size-me",
+  "description": "Angular directive that makes your components aware of width, height and position with the help of element-resize-detector.",
   "version": "3.0.1",
   "dependencies": {
     "element-resize-detector": "^1.2.4",
@@ -16,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eisberg-labs/angular-components.git"
+    "url": "https://github.com/eisberg-labs/ngx-size-me.git"
   },
   "bugs": {
-    "url": "https://github.com/eisberg-labs/angular-components/issues"
+    "url": "https://github.com/eisberg-labs/ngx-size-me/issues"
   },
   "homepage": "https://ngx-size-me.amarjanica.com",
   "keywords": [

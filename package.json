@@ -1,5 +1,6 @@
 {
   "name": "@eisberg-labs/ngx-size-me-project",
+  "description": "Angular directive that makes your components aware of width, height and position with the help of element-resize-detector.",
   "version": "0.0.1",
   "workspaces": [
     "demo",
