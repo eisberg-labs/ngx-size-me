@@ -1,3 +1,12 @@
+## [3.0.2](https://github.com/eisberg-labs/ngx-size-me/compare/3.0.1...3.0.2) (2023-04-25)
+
+
+### Bug Fixes
+
+* wrong urls in package.json, add description ([5d71485](https://github.com/eisberg-labs/ngx-size-me/commit/5d714857f97b2a526987b1443557d2fcf76739d2))
+
+
+
 ## [3.0.1](https://github.com/eisberg-labs/ngx-size-me/compare/3.0.0...3.0.1) (2023-04-25)
 
 
