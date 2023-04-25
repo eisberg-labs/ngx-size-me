@@ -1,6 +1,6 @@
 {
   "name": "@eisberg-labs/ngx-size-me",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "dependencies": {
     "element-resize-detector": "^1.2.4",
     "tslib": "^2.3.0"

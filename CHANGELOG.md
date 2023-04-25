@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/eisberg-labs/ngx-size-me/compare/3.0.0...3.0.1) (2023-04-25)
+
+
+### Reverts
+
+* docs reverted to old mdx-js/react ([d7d8554](https://github.com/eisberg-labs/ngx-size-me/commit/d7d8554aaca9f45ea0936214941deb9878b611ce))
+
+
+
 # [3.0.0](https://github.com/eisberg-labs/ngx-size-me/compare/2.0.7...3.0.0) (2023-04-24)
 
 
