@@ -1,8 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
-  "packageRules": [{
-    "matchPackageNames": "@mdx-js/react",
-    "allowedVersions": "<1.7.0"
+  "packageRules": [ {
+    "packagePatterns": ["*"],
+    "excludePackagePatterns": ["^@angular.+", "element-resize-detector"],
+    "enabled": false
   }]
 }
