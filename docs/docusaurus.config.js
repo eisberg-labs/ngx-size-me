@@ -3,7 +3,6 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ngx Size Me',
@@ -37,7 +36,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
-          trackingID: 'G-KF960JLT82', // todo: move to env
+          trackingID: process.env.ANALYTICS_ID,
           anonymizeIP: true,
         },
         docs: {
