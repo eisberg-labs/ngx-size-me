@@ -1,7 +1,7 @@
 {
   "name": "@eisberg-labs/ngx-size-me",
   "description": "Angular directive that makes your components aware of width, height and position with the help of element-resize-detector.",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "dependencies": {
     "element-resize-detector": "^1.2.4",
     "tslib": "^2.3.0"

@@ -1,3 +1,17 @@
+# [4.0.0](https://github.com/eisberg-labs/ngx-size-me/compare/3.0.2...4.0.0) (2023-06-15)
+
+
+### Features
+
+* update dependencies ([74bbf64](https://github.com/eisberg-labs/ngx-size-me/commit/74bbf64efb2a5c2fc3e1d8d5b6b8d609592ab322))
+
+
+### BREAKING CHANGES
+
+* update angular 16
+
+
+
 ## [3.0.2](https://github.com/eisberg-labs/ngx-size-me/compare/3.0.1...3.0.2) (2023-04-25)
 
 
