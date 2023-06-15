@@ -35,10 +35,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: {
+        gtag: (!!process.env.ANALYTICS_ID) ? {
           trackingID: process.env.ANALYTICS_ID,
           anonymizeIP: true,
-        },
+        }: undefined,
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           /* other docs plugin options */
